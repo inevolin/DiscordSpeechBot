@@ -120,7 +120,9 @@ Notes:
 
 
 ## Developers documentation
-coming soon
+Music lagging/stuttering? Try this: https://groovy.zendesk.com/hc/en-us/articles/360023031772-Laggy-Glitchy-Distorted-No-Audio
+
+more coming soon
 
 ## Contact
 Name: Ilya Nevolin
