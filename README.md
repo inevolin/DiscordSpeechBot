@@ -15,7 +15,8 @@ npm install
 ```
 
 ## Settings
-Create a (free) discord bot and obtain the API credentials. Here's an easy tutorial: https://www.writebots.com/discord-bot-token/
+Create a (free) discord bot and obtain the API credentials.
+Here's an easy tutorial: https://www.writebots.com/discord-bot-token/
 Note: Give your bot enough permissions or simply grant it Administrator rights.
 
 Create a (free) Spotify developers account to obtain the API credentials: https://developer.spotify.com/dashboard/
@@ -74,8 +75,10 @@ music list
 music clear list
 ```
 
-A successful voice commands looks like this:
+A successful voice command looks like this:
+
 `<long pause>   music play 'justin timberlake cry river'   <long pause>`
+
 
 Notes: 
 - Each voice command starts with `music`.
