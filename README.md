@@ -1,5 +1,5 @@
 # DiscordSpeechBot
-A speech-to-text bot for discord with music commands and more using NodeJS.
+A speech-to-text bot for discord with music commands and more written in NodeJS.
 
 You can follow the steps below to get this bot up and running.
 
