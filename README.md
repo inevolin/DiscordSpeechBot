@@ -94,7 +94,9 @@ A successful voice command should contain as little noise before and after the c
 But it should also not contain too many/long periods of silence, otherwise the bot will only receive separate words instead of a whole sentence.
 
 A successful voice commands looks like this:
+
 `<long pause>   music play 'justin timberlake cry river'   <long pause>`
+
 note: `<long pause>` is usually between 1 and 2 seconds, long enough for discord to stop processing your audio input
 
 note: if you have a very sensitive microphone or a lot of (background) noise, then voice commands may not work properly for you.
