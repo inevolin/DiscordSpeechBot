@@ -125,7 +125,11 @@ Music lagging/stuttering? Try this: https://groovy.zendesk.com/hc/en-us/articles
 more coming soon
 
 ## Contact
+For questions, feedback or issues feel free to get in touch with me.
+
 Name: Ilya Nevolin
 
 Email: ilja.nevolin@gmail.com
+
+Discord: https://discord.gg/ApdTMG9
 
