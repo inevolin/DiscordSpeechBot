@@ -12,14 +12,11 @@ If you prefer using Docker instead of manually installing it:
 4. skip to the Settings part to configure your `settings.json`
 5. skip to the Running part.
 
-## Prerequisites
+
+## Installation
 You need nodeJS version 12+ with npm on your machine.
 ```
 sudo apt-get install -y ffmpeg sox screen
-```
-
-## Installation
-```
 git clone https://github.com/healzer/DiscordSpeechBot.git
 cd DiscordSpeechBot
 npm install
