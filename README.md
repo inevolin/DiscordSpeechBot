@@ -4,7 +4,7 @@ A speech-to-text bot for discord with music commands and more using NodeJS.
 ## Installation
 
 ### Prerequisites
-NodeJS v12 with NPM
+You need nodeJS version 12+ with npm on your machine.
 ```
 sudo apt-get install ffmpeg sox screen
 ```
