@@ -1,6 +1,8 @@
 settings.json
 data/
 temp/
+screenlog*
+package-lock.json
 
 # Logs
 logs
