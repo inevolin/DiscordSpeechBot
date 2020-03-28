@@ -369,7 +369,7 @@ function process_commands_query(query, mapKey, userid) {
 
         switch(cmd) {
             case 'help':
-                out = getHelpString();    
+                out = _CMD_HELP;
                 break;
             case 'skip':
                 out = _CMD_SKIP;
@@ -391,7 +391,7 @@ function process_commands_query(query, mapKey, userid) {
                     out = _CMD_CLEAR;
                 break;
             case 'list':
-                out = getQueueString(mapKey);
+                out = _CMD_QUEUE;
                 break;
             case 'hello':
                 out = 'hello back =)'
