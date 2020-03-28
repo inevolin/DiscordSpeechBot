@@ -1,8 +1,12 @@
 # DiscordSpeechBot
 A speech-to-text bot for discord with music commands and more written in NodeJS.
 
-You can follow the steps below to get this bot up and running.
+## Demo:
 
+[![Discord Speech Bot Demo](http://img.youtube.com/vi/cfFI7E32v_8/0.jpg)](http://www.youtube.com/watch?v=cfFI7E32v_8 "Discord Speech Bot Demo")
+
+
+You can follow the steps below to get this bot up and running.
 
 ## Docker (optional)
 If you prefer using Docker instead of manually installing it:
