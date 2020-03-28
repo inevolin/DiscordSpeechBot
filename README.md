@@ -62,8 +62,6 @@ Make sure your server has a text and voice channel.
 2. In one of your text channels type: `!join`
 3. Type `!help` for a list of commands.
 
-When the bot is inside a voice channel it listens to all speech and tries to detect commands.
-
 Examples:
 
 ```
@@ -74,6 +72,9 @@ Examples:
 ```
 
 ### Voice commands
+
+When the bot is inside a voice channel it listens to all speech and tries to detect commands.
+
 Try saying:
 ```
 music play 'the chemical brothers'
