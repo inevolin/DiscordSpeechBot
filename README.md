@@ -121,3 +121,8 @@ Notes:
 
 ## Developers documentation
 coming soon
+
+## Contact
+Name: Ilya Nevolin
+Email: ilja.nevolin@gmail.com
+
