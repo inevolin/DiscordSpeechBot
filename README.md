@@ -1,22 +1,20 @@
 # DiscordSpeechBot
 A speech-to-text bot for discord with music commands and more using NodeJS.
 
-## Installation
-
-### Prerequisites
+## Prerequisites
 You need nodeJS version 12+ with npm on your machine.
 ```
 sudo apt-get install -y ffmpeg sox screen
 ```
 
-### Installation
+## Installation
 ```
 git clone https://github.com/healzer/DiscordSpeechBot.git
 cd DiscordSpeechBot
 npm install
 ```
 
-### Settings
+## Settings
 Create a (free) discord bot and obtain the API credentials. Here's an easy tutorial: https://www.writebots.com/discord-bot-token/
 Note: Give your bot enough permissions or simply grant it Administrator rights.
 
@@ -34,7 +32,7 @@ Rename the file `settings-sample.json` to `settings.json` and enter the obtained
 }
 ```
 
-### Running
+## Running
 Development mode (logging to console):
 ```
 node voice.js
@@ -46,3 +44,13 @@ Production mode (logging to screenlog file):
 
 ./close.sh       # this closes the background screen session.
 ```
+
+## Usage
+By now you have a discord server, the DiscordSpeechBot is running and is a part of your server.
+Make sure your server has a text and voice channel.
+
+Enter one of your voice channels.
+In one of your text channels type: `!join`
+
+## Developers documentation
+coming soon
