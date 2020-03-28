@@ -55,6 +55,7 @@ Make sure your server has a text and voice channel.
 
 When the bot is inside a voice channel it listens to all speech and tries to detect commands.
 Examples:
+
 ```
 !play https://www.youtube.com/watch?v=vK1YiArMDfg
 !play red hot chili peppers californication
@@ -91,6 +92,12 @@ music <long silence>  play  <long silence> 'the chemical brothers'
 
 A successful voice command should contain as little noise before and after the command.
 But it should also not contain too many/long periods of silence, otherwise the bot will only receive separate words instead of a whole sentence.
+
+A successful voice commands looks like this:
+`<long pause>   music play 'justin timberlake cry river'   <long pause>`
+note: `<long pause>` is usually between 1 and 2 seconds, long enough for discord to stop processing your audio input
+
+note: if you have a very sensitive microphone or a lot of (background) noise, then voice commands may not work properly for you.
 
 
 ## Developers documentation
