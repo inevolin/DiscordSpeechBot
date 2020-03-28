@@ -23,6 +23,17 @@ const request = require('request');
 ///////////////// VARIA //////////////////
 //////////////////////////////////////////
 
+function necessary_dirs() {
+    if (!fs.existsSync('./temp/')){
+        fs.mkdirSync('./temp/');
+    }
+    if (!fs.existsSync('./data/')){
+        fs.mkdirSync('./data/');
+    }
+}
+necessary_dirs()
+
+
 function clean_temp() {
     const dd = './temp/';
     fs.readdir(dd, (err, files) => {
@@ -284,7 +295,7 @@ function speak_impl(voice_Connection, mapKey) {
         }
         console.log(`I'm listening to ${user.username}`)
 
-        const filename = '/var/www/html/discordvoice/temp/audio_' + mapKey + '_' + user.username.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '_' + Date.now() + '.tmp';
+        const filename = './temp/audio_' + mapKey + '_' + user.username.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '_' + Date.now() + '.tmp';
         let ws = fs.createWriteStream(filename);
 
         // this creates a 16-bit signed PCM, stereo 48KHz stream
@@ -614,7 +625,7 @@ async function music_message(message, mapKey) {
 }
 
 let GUILD_FAVORITES = {};
-const GUILD_FAVORITES_FILE = 'data/guild_favorites.json';
+const GUILD_FAVORITES_FILE = './data/guild_favorites.json';
 setInterval(()=>{
     var json = JSON.stringify(GUILD_FAVORITES);
     fs.writeFile(GUILD_FAVORITES_FILE, json, 'utf8', (err)=>{
@@ -945,7 +956,7 @@ async function getYoutubeVideoData(str, isretry=false) {
     }
 }
 
-const YT_CACHE_FILE = 'data/yt_cache.json';
+const YT_CACHE_FILE = './data/yt_cache.json';
 setInterval(()=>{
     var json = JSON.stringify(YT_CACHE);
     fs.writeFile(YT_CACHE_FILE, json, 'utf8', (err)=>{
