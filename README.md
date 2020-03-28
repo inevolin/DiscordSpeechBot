@@ -49,8 +49,49 @@ Production mode (logging to screenlog file):
 By now you have a discord server, the DiscordSpeechBot is running and is a part of your server.
 Make sure your server has a text and voice channel.
 
-Enter one of your voice channels.
-In one of your text channels type: `!join`
+1. Enter one of your voice channels.
+2. In one of your text channels type: `!join`
+3. Type `!help` for a list of commands.
+
+When the bot is inside a voice channel it listens to all speech and tries to detect commands.
+Examples:
+```
+!play https://www.youtube.com/watch?v=vK1YiArMDfg
+!play red hot chili peppers californication
+!list
+!skip
+```
+
+### Voice commands
+Try saying:
+```
+music play 'the chemical brothers'
+music skip
+music play random
+music list
+music clear list
+```
+Notes: 
+- Each voice command starts with `music`.
+- Each user talks to a separate channel, the bot hears every user separately.
+- Only when your user picture turns green in the voice channel will the bot receive your audio.
+- A long pause interrupts the audio input.
+
+Here are some examples which may not work (properly):
+```
+<talking> music skip
+music skip <talking>
+<talking> music skip <talking>
+...
+
+music play 'the chemical brothers' <talking>
+
+music <long silence>  play  <long silence> 'the chemical brothers'
+```
+
+A successful voice command should contain as little noise before and after the command.
+But it should also not contain too many/long periods of silence, otherwise the bot will only receive separate words instead of a whole sentence.
+
 
 ## Developers documentation
 coming soon
