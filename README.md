@@ -54,6 +54,7 @@ Make sure your server has a text and voice channel.
 3. Type `!help` for a list of commands.
 
 When the bot is inside a voice channel it listens to all speech and tries to detect commands.
+
 Examples:
 
 ```
@@ -97,9 +98,9 @@ A successful voice commands looks like this:
 
 `<long pause>   music play 'justin timberlake cry river'   <long pause>`
 
-note: `<long pause>` is usually between 1 and 2 seconds, long enough for discord to stop processing your audio input
-
-note: if you have a very sensitive microphone or a lot of (background) noise, then voice commands may not work properly for you.
+Notes:
+- `<long pause>` is usually between 1 and 2 seconds, long enough for discord to stop processing your audio input.
+- If you have a very sensitive microphone or a lot of (background) noise, then voice commands may not work properly for you.
 
 
 ## Developers documentation
