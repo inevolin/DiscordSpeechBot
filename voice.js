@@ -177,10 +177,14 @@ discordClient.on('message', async (msg) => {
         if (!('guild' in msg) || !msg.guild) return; // prevent private messages to bot
         const mapKey = msg.guild.id;
         if (msg.content.trim().toLowerCase() == _CMD_JOIN) {
-            if (!guildMap.has(mapKey))
-                await connect(msg, mapKey)
-            else
-                msg.reply('Already connected')
+            if (!msg.member.voice.channelID) {
+                msg.reply('Error: please join a voice channel first.')
+            } else {
+                if (!guildMap.has(mapKey))
+                    await connect(msg, mapKey)
+                else
+                    msg.reply('Already connected')
+            }
         } else if (msg.content.trim().toLowerCase() == _CMD_LEAVE) {
             if (guildMap.has(mapKey)) {
                 let val = guildMap.get(mapKey);
@@ -290,7 +294,7 @@ async function connect(msg, mapKey) {
 
 function speak_impl(voice_Connection, mapKey) {
     voice_Connection.on('speaking', async (user, speaking) => {
-        if (speaking.bitfield == 0 || user.username == 'Groovy') {
+        if (speaking.bitfield == 0 || user.bot) {
             return
         }
         console.log(`I'm listening to ${user.username}`)
@@ -314,7 +318,7 @@ function speak_impl(voice_Connection, mapKey) {
             const duration = fileSizeInBytes / 48000 / 4;
             console.log("duration: " + duration)
 
-            if (duration < 1.0 || duration > 10) {
+            if (duration < 1.0 || duration > 19) { // 20 seconds max dur
                 console.log("TOO SHORT / TOO LONG; SKPPING")
                 fs.unlinkSync(filename)
                 return;
