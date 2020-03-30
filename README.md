@@ -98,6 +98,7 @@ Notes:
 - Each user talks to a separate channel, the bot hears every user separately.
 - Only when your user picture turns green in the voice channel will the bot receive your audio.
 - A long pause interrupts the audio input.
+- The duration of a single audio input is limited to 20 seconds, longer audio is not transcribed.
 
 Here are some examples which may not work (properly):
 ```
