@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/healzer/discordvoice.git"
+    "url": "git+https://github.com/healzer/DiscordSpeechBot.git"
   },
   "author": "Ilja Nevolin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/healzer/discordvoice/issues"
+    "url": "https://github.com/healzer/DiscordSpeechBot/issues"
   },
-  "homepage": "https://github.com/healzer/discordvoice#readme"
+  "homepage": "https://github.com/healzer/DiscordSpeechBot#readme"
 }
