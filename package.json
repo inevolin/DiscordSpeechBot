@@ -2,7 +2,7 @@
   "name": "discordvoice",
   "version": "1.0.0",
   "description": "",
-  "main": "voice.js",
+  "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.1.0",
     "discord.js": "^12.1.1",
@@ -19,7 +19,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
