@@ -17,4 +17,4 @@ COPY settings.json /var/www/DiscordSpeechBot/settings.json
 
 RUN npm install
 
-CMD ["node", "voice.js"]
+CMD ["node", "index.js"]
