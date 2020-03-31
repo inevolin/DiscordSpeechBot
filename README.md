@@ -48,7 +48,7 @@ Rename the file `settings-sample.json` to `settings.json` and enter the obtained
 ## Running
 Development mode (logging to console):
 ```
-node voice.js
+node index.js
 ```
 
 Production mode (logging to screenlog file):
