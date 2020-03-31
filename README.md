@@ -12,10 +12,9 @@ You can follow the steps below to get this bot up and running.
 ## Docker (optional)
 If you prefer using Docker instead of manually installing it:
 1. Save the `Dockerfile`
-2. run `docker build -t discordspeechbot .`  this may take a minute or two.
-3. run `docker run -it discordspeechbot`
-4. skip to the Settings part to configure your `settings.json`
-5. skip to the Running part.
+2. Create a file `settings.json` and configure it (see Settings part)
+3. run `docker build -t discordspeechbot .`  this may take a minute or two.
+4. run `docker run -it discordspeechbot`
 
 
 ## Installation
