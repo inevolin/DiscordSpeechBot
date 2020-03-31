@@ -15,7 +15,7 @@ If you prefer using Docker instead of manually installing it:
 2. Create a file `settings.json` and configure it (see Settings part)
 3. run `docker build -t discordspeechbot .`  this may take a minute or two.
 4. run `docker run -it discordspeechbot`
-
+5. skip to Usage part.
 
 ## Installation
 You need nodeJS version 12+ with npm on your machine.
