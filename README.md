@@ -124,10 +124,9 @@ Notes:
 - If you have a very sensitive microphone or a lot of (background) noise, then voice commands may not work properly for you.
 
 
-## Developers documentation
-Music lagging/stuttering? Try this: https://groovy.zendesk.com/hc/en-us/articles/360023031772-Laggy-Glitchy-Distorted-No-Audio
-
-more coming soon
+## For developers
+Music lagging or stuttering? [Try this](https://groovy.zendesk.com/hc/en-us/articles/360023031772-Laggy-Glitchy-Distorted-No-Audio)
+Using Mozilla DeepSpeech for speech recognition, [tutorial](https://medium.com/@ilyanevolin/discord-stt-bot-using-mozilla-deepspeech-e77ee28937eb).
 
 ## Contact
 For questions, feedback or issues feel free to get in touch with me.
