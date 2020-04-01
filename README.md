@@ -126,6 +126,7 @@ Notes:
 
 ## For developers
 Music lagging or stuttering? [Try this](https://groovy.zendesk.com/hc/en-us/articles/360023031772-Laggy-Glitchy-Distorted-No-Audio)
+
 Using Mozilla DeepSpeech for speech recognition, [tutorial](https://medium.com/@ilyanevolin/discord-stt-bot-using-mozilla-deepspeech-e77ee28937eb).
 
 ## Contact
