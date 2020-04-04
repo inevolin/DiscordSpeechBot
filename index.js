@@ -167,6 +167,7 @@ const GENRES = {
     'trance': ['trance'],
     'groove': ['groove'],
     'classical': ['classical'],
+    'techno': ['techno'],
 
 }
 
