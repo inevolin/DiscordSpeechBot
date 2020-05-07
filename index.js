@@ -779,8 +779,10 @@ async function queueTryPlayNext(mapKey, cbok, cberr) {
     } catch (e) {
         console.log('queueTryPlayNext: ' + e)
         cberr('Error playing, try again?')
-        val.currentPlayingTitle = val.currentPlayingQuery = null;
-        if (val.musicDispatcher) val.musicDispatcher.end();
+        if (typeof val !== 'undefined') {
+            val.currentPlayingTitle = val.currentPlayingQuery = null;
+            if (val.musicDispatcher) val.musicDispatcher.end();
+        }
     }
 
 }
