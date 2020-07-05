@@ -32,7 +32,9 @@ npm install
 
 ## Windows Installation
 You need nodeJS version 12+ with npm on your machine.
+
 Download and install the latest version of "sox" for Windows: https://sourceforge.net/projects/sox/files/sox/
+
 Using shell or command prompt execute the following:
 ```
 git clone https://github.com/healzer/DiscordSpeechBot.git
