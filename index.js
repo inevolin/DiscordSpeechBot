@@ -846,8 +846,8 @@ function shuffleMusic(mapKey, cbok, cberr) {
 //////////////////////////////////////////
 async function transcribe(file) {
 
-  // return transcribe_witai(file)
-  return transcribe_gspeech(file)
+  return transcribe_witai(file)
+  // return transcribe_gspeech(file)
 }
 
 // WitAI
