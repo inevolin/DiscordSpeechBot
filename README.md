@@ -114,13 +114,12 @@ A successful voice command looks like this:
 
 `<long pause>   music play 'justin timberlake cry river'   <long pause>`
 
-
-Notes: 
+### Notes: 
 - Each voice command starts with `music`.
 - Each user talks to a separate channel, the bot hears every user separately.
 - Only when your user picture turns green in the voice channel will the bot receive your audio.
 - A long pause interrupts the audio input.
-- The duration of a single audio input is limited to 20 seconds, longer audio is not transcribed.
+- (WitAI only) The duration of a single audio input is limited to 20 seconds, longer audio is not transcribed.
 
 Here are some examples which may not work (properly):
 ```
@@ -135,7 +134,7 @@ music <long silence>  play  <long silence> 'the chemical brothers'
 ```
 
 
-Notes:
+### Notes:
 - A successful voice command should contain as little noise before and after the command.
 - A successful voice command should should not contain too many/long periods of silence, otherwise the bot will only receive separate words instead of the whole sentence.
 - `<long pause>` is usually between 1 and 2 seconds, long enough for discord to stop processing your audio input.
@@ -146,6 +145,17 @@ Notes:
 Music lagging or stuttering? [Try this](https://groovy.zendesk.com/hc/en-us/articles/360023031772-Laggy-Glitchy-Distorted-No-Audio)
 
 Using Mozilla DeepSpeech for speech recognition, [tutorial](https://medium.com/@ilyanevolin/discord-stt-bot-using-mozilla-deepspeech-e77ee28937eb).
+
+### Speech-To-Text
+
+By default WitAI's free API is used for voice recognition / transcription. But you can easily integrate any other API into the bot. You can use Google's Speech-to-Text API as follows:
+
+1. Open `index.js`, inside the function `transcribe(file)` make sure that `transcribe_gspeech` is being used and the other one(s) are disabled.
+2. You may want to adjust the `languageCode` value if you're speaking a non-English language.
+3. Enable Google Speech API here: https://console.cloud.google.com/apis/library/speech.googleapis.com
+4. Create a new Service Account (or use your existing one): https://console.cloud.google.com/apis/credentials
+5. Create a new Service Account Key (or use existing) and download the json file.
+6. Put the json file inside your bot directory and rename it to `gspeech_key.json`.
 
 ## Contact
 For enquiries or issues get in touch with me:
