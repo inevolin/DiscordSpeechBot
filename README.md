@@ -134,6 +134,26 @@ Music lagging or stuttering? [Try this](https://groovy.zendesk.com/hc/en-us/arti
 
 Using Mozilla DeepSpeech for speech recognition, [tutorial](https://medium.com/@ilyanevolin/discord-stt-bot-using-mozilla-deepspeech-e77ee28937eb).
 
+## Language
+WitAI supports over 120 languages (https://wit.ai/faq), however only one language can be used at a time.
+If you're not speaking English on Discord, then change your default language on WitAI under "settings" for your app.
+
+You can also change the language using the following bot command:
+
+```
+*lang <code>
+
+*lang en     for English
+*lang es     for Spanish
+*lang ru     for Russian
+...
+
+The bot should reply with a success message.
+
+<code> should be an ISO 639-1 language code (2 digits):
+https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+```
+
 ### Speech-To-Text
 
 By default WitAI's free API is used for voice recognition / transcription. But you can easily integrate any other API into the bot. You can use Google's Speech-to-Text API as follows:
