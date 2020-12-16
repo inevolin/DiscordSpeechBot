@@ -9,9 +9,9 @@ Try the bot for yourself on our Discord server: https://discord.gg/ApdTMG9
 
 You can follow the steps below to get this bot up and running.
 
-## Heroku (optional)
+## Heroku
 If you don't have a linux server/machine then you can use Heroku for hosting your bot 24/7 and it's free.
-I wrote an easy step-by-step guide [here](https://medium.com/@ilyanevolin/deploying-my-discord-bots-on-heroku-105752941706).
+Under "Resources" tab, use the "worker" deno type, and not the "web" one.
 
 ## Docker
 If you prefer using Docker instead of manually installing it, you may need to edit the `Dockerfile`.
