@@ -129,6 +129,71 @@ function loadConfig() {
     
 }
 loadConfig()
+
+
+const https = require('https')
+function listWitAIApps(cb) {
+    const options = {
+      hostname: 'api.wit.ai',
+      port: 443,
+      path: '/apps?offset=0&limit=100',
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+WITAPIKEY,
+      },
+    }
+
+    const req = https.request(options, (res) => {
+      res.setEncoding('utf8');
+      let body = ''
+      res.on('data', (chunk) => {
+        body += chunk
+      });
+      res.on('end',function() {
+        cb(JSON.parse(body))
+      })
+    })
+
+    req.on('error', (error) => {
+      console.error(error)
+      cb(null)
+    })
+    req.end()
+}
+function updateWitAIAppLang(appID, lang, cb) {
+    const options = {
+      hostname: 'api.wit.ai',
+      port: 443,
+      path: '/apps/' + appID,
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+WITAPIKEY,
+      },
+    }
+    const data = JSON.stringify({
+      lang
+    })
+
+    const req = https.request(options, (res) => {
+      res.setEncoding('utf8');
+      let body = ''
+      res.on('data', (chunk) => {
+        body += chunk
+      });
+      res.on('end',function() {
+        cb(JSON.parse(body))
+      })
+    })
+    req.on('error', (error) => {
+      console.error(error)
+      cb(null)
+    })
+    req.write(data)
+    req.end()
+}
+
 //////////////////////////////////////////
 //////////////////////////////////////////
 //////////////////////////////////////////
@@ -161,6 +226,7 @@ const _CMD_SKIP        = PREFIX + 'skip';
 const _CMD_QUEUE       = PREFIX + 'list';
 const _CMD_DEBUG       = PREFIX + 'debug';
 const _CMD_TEST        = PREFIX + 'hello';
+const _CMD_LANG        = PREFIX + 'lang';
 const PLAY_CMDS = [_CMD_PLAY, _CMD_PAUSE, _CMD_RESUME, _CMD_SHUFFLE, _CMD_SKIP, _CMD_GENRE, _CMD_GENRES, _CMD_RANDOM, _CMD_CLEAR, _CMD_QUEUE, _CMD_FAVORITE, _CMD_FAVORITES, _CMD_UNFAVORITE];
 
 const EMOJI_GREEN_CIRCLE = '🟢'
@@ -226,6 +292,21 @@ discordClient.on('message', async (msg) => {
         }
         else if (msg.content.trim().toLowerCase() == _CMD_TEST) {
             msg.reply('hello back =)')
+        }
+        else if (msg.content.split('\n')[0].split(' ')[0].trim().toLowerCase() == _CMD_LANG) {
+            const lang = msg.content.replace(_CMD_LANG, '').trim().toLowerCase()
+            listWitAIApps(data => {
+              if (!data.length)
+                return msg.reply('no apps found! :(')
+              for (const x of data) {
+                updateWitAIAppLang(x.id, lang, data => {
+                  if ('success' in data)
+                    msg.reply('succes!')
+                  else if ('error' in data && data.error !== 'Access token does not match')
+                    msg.reply('Error: ' + data.error)
+                })
+              }
+            })
         }
     } catch (e) {
         console.log('discordClient message: ' + e)
