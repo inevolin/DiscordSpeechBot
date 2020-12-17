@@ -125,7 +125,7 @@ function loadConfig() {
         SPOTIFY_TOKEN_SECRET = process.env.SPOTIFY_TOKEN_SECRET;
     }
     if (!DISCORD_TOK || !WITAPIKEY)
-        throw 'failed laoding config #113 missing keys!'
+        throw 'failed loading config #113 missing keys!'
     
 }
 loadConfig()
