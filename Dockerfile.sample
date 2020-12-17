@@ -23,5 +23,7 @@ RUN npm install pm2@latest -g
 
 # ENV DISCORD_TOK=
 # ENV WITAPIKEY=
+# ENV SPOTIFY_TOKEN_ID=
+# ENV SPOTIFY_TOKEN_SECRET=
 
 CMD git pull && npm update && pm2 start ecosystem.config.js
