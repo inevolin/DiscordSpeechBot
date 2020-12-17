@@ -145,11 +145,11 @@ If you're not speaking English on Discord, then change your default language on 
 You can also change the language using the following bot command:
 
 ```
-*lang <code>
+!lang <code>
 
-*lang en     for English
-*lang es     for Spanish
-*lang ru     for Russian
+!lang en     for English
+!lang es     for Spanish
+!lang ru     for Russian
 ...
 
 The bot should reply with a success message.
