@@ -437,7 +437,7 @@ function process_commands_query(query, mapKey, userid) {
     let out = null;
 
     const regex = /^music ([a-zA-Z]+)(.+?)?$/;
-    const m = query.match(regex);
+    const m = query.toLowerCase().match(regex);
     if (m && m.length) {
         const cmd = (m[1]||'').trim();
         const args = (m[2]||'').trim();
