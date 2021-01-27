@@ -661,7 +661,7 @@ async function music_message(message, mapKey) {
 
         } else if (args[0] == _CMD_FAVORITES) {
             const favs = getFavoritesString(mapKey);
-            if (!GUILD_FAVORITES[mapKey].length)
+            if (!(mapKey in GUILD_FAVORITES) || !GUILD_FAVORITES[mapKey].length)
                 message.channel.send('No favorites to play.')
             else {
                 const chunks = message_chunking(favs, DISCORD_MSG_LIMIT);
