@@ -195,8 +195,7 @@ const _CMD_TEST        = PREFIX + 'hello';
 const _CMD_LANG        = PREFIX + 'lang';
 const PLAY_CMDS = [_CMD_PLAY, _CMD_PAUSE, _CMD_RESUME, _CMD_SHUFFLE, _CMD_SKIP, _CMD_GENRE, _CMD_GENRES, _CMD_RANDOM, _CMD_CLEAR, _CMD_QUEUE, _CMD_FAVORITE, _CMD_FAVORITES, _CMD_UNFAVORITE];
 
-const EMOJI_GREEN_CIRCLE = '🟢'
-const EMOJI_RED_CIRCLE = '🔴'
+
 
 const GENRES = {
     'hip-hop': ['hip-hop', 'hip hop', 'hiphop', 'rap'],
